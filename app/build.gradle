@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "dependencies.gradle"
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.spacex"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation deps.kotlinCore
+    implementation deps.appCompat
+    implementation deps.material
+    implementation deps.constraintlayout
+    testImplementation deps.junit
+    androidTestImplementation deps.androidXJUnit
+    androidTestImplementation deps.espresso
+
+    implementation deps.retrofit
+    implementation deps.gsonConverter
+    implementation deps.okHttp
+    implementation deps.okHttpLogging
+
+    implementation deps.koinAndroid
+    implementation deps.koinCore
+
+    implementation deps.coroutinesCore
+    implementation deps.coroutinesAndroid
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+
+}

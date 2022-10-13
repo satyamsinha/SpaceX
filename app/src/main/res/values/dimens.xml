@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="photo_size">64dp</dimen>
+    <dimen name="photo_size_dashboard">128dp</dimen>
+    <dimen name="text_normal">18sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="large_text">24sp</dimen>
+</resources>
